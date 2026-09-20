@@ -123,7 +123,6 @@ header nav a:hover{color:var(--main)}
 }
 #searchInput::placeholder{color:#aaa}
 
-/* نبذات البحث */
 #suggestBox{
   position:absolute;top:100%;right:0;left:0;background:#fff;
   border-radius:16px;margin-top:8px;box-shadow:0 15px 40px rgba(0,0,0,.18);
@@ -158,66 +157,66 @@ header nav a:hover{color:var(--main)}
 /* ===== تخطيط المنتجات + كارت الطلب الخاص ===== */
 .main-content{
   display:grid;
-  grid-template-columns: 320px 1fr;
-  gap:25px;
-  padding:35px 6%;
+  grid-template-columns: 260px 1fr; /* مساحة أصغر للخانة الجانبية */
+  gap:20px;
+  padding:30px 5%;
 }
-@media(max-width:900px){
+@media(max-width:850px){
   .main-content{ grid-template-columns: 1fr; }
 }
 
-/* كارت إضافة طلب خاص جانبي */
+/* كارت إضافة طلب خاص مصغر */
 .custom-order-card{
   background:#fff;
-  border:2px dashed var(--main);
-  border-radius:18px;
-  padding:22px;
+  border:1.5px dashed var(--main);
+  border-radius:14px;
+  padding:16px;
   height:fit-content;
-  box-shadow:0 8px 25px rgba(230,126,34,.12);
+  box-shadow:0 4px 15px rgba(230,126,34,.08);
   position:sticky;
-  top:90px;
+  top:85px;
 }
 .custom-order-card h3{
-  font-size:18px;color:var(--dark);margin-bottom:8px;display:flex;align-items:center;gap:8px;
+  font-size:15px;color:var(--dark);margin-bottom:6px;display:flex;align-items:center;gap:6px;
 }
 .custom-order-card p{
-  font-size:13px;color:#777;margin-bottom:18px;line-height:1.4;
+  font-size:12px;color:#777;margin-bottom:12px;line-height:1.3;
 }
-.custom-order-card input, .custom-order-card textarea{
-  width:100%;padding:11px 14px;border:1px solid #ddd;border-radius:10px;
-  font-size:14px;outline:none;margin-bottom:12px;transition:.3s;
+.custom-order-card input{
+  width:100%;padding:9px 12px;border:1px solid #ddd;border-radius:8px;
+  font-size:13px;outline:none;margin-bottom:10px;transition:.3s;
 }
-.custom-order-card input:focus, .custom-order-card textarea:focus{
-  border-color:var(--main);box-shadow:0 0 10px rgba(230,126,34,.2);
+.custom-order-card input:focus{
+  border-color:var(--main);box-shadow:0 0 8px rgba(230,126,34,.2);
 }
 .custom-order-card button{
-  width:100%;padding:12px;border:none;border-radius:10px;
+  width:100%;padding:10px;border:none;border-radius:8px;
   background:linear-gradient(135deg,var(--main),var(--main-dark));
-  color:#fff;font-size:15px;font-weight:bold;cursor:pointer;transition:.3s;
+  color:#fff;font-size:13.5px;font-weight:bold;cursor:pointer;transition:.3s;
 }
 .custom-order-card button:hover{
-  transform:translateY(-2px);box-shadow:0 8px 20px rgba(230,126,34,.3);
+  transform:translateY(-2px);box-shadow:0 6px 15px rgba(230,126,34,.3);
 }
 
 .products{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-  gap:20px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:18px;
 }
 .card{
-  background:var(--card);border-radius:18px;overflow:hidden;
+  background:var(--card);border-radius:16px;overflow:hidden;
   box-shadow:0 5px 20px rgba(0,0,0,.07);transition:.35s;
   animation:cardIn .5s both;
 }
 @keyframes cardIn{0%{opacity:0;transform:translateY(25px)}100%{opacity:1;transform:translateY(0)}}
 .card:hover{transform:translateY(-8px);box-shadow:0 15px 35px rgba(0,0,0,.15)}
-.card .img{height:150px;display:flex;align-items:center;justify-content:center;font-size:65px;background:linear-gradient(135deg,#fdf2e9,#fdebd0);overflow:hidden}
+.card .img{height:140px;display:flex;align-items:center;justify-content:center;font-size:60px;background:linear-gradient(135deg,#fdf2e9,#fdebd0);overflow:hidden}
 .card .img img{width:100%;height:100%;object-fit:cover}
-.card .body{padding:16px}
-.card h3{font-size:16px;margin-bottom:8px}
-.card .price{color:var(--main-dark);font-size:18px;font-weight:900;margin-bottom:12px}
+.card .body{padding:14px}
+.card h3{font-size:15px;margin-bottom:6px}
+.card .price{color:var(--main-dark);font-size:17px;font-weight:900;margin-bottom:10px}
 .card button{
-  width:100%;padding:10px;border:none;border-radius:10px;
-  background:var(--dark);color:#fff;font-size:14px;font-weight:bold;cursor:pointer;transition:.3s;
+  width:100%;padding:9px;border:none;border-radius:8px;
+  background:var(--dark);color:#fff;font-size:13.5px;font-weight:bold;cursor:pointer;transition:.3s;
 }
 .card button:hover{background:var(--main)}
 
@@ -234,8 +233,8 @@ header nav a:hover{color:var(--main)}
   display:flex;justify-content:space-between;align-items:center;
   padding:12px;border-bottom:1px solid #eee;animation:cardIn .4s both;
 }
-.cart-item .info b{display:block;font-size:14px}
-.cart-item .info small{color:#888}
+.cart-item .info b{display:block;font-size:13.5px}
+.cart-item .info small{color:#888;font-size:12px}
 .cart-item .qty{display:flex;align-items:center;gap:8px}
 .cart-item .qty button{
   width:26px;height:26px;border:none;border-radius:8px;background:#eee;
@@ -359,16 +358,15 @@ footer .copy{color:#777;font-size:13px;margin-top:20px}
 
   <div class="cats" id="cats"></div>
 
-  <!-- الهيكل الرئيسي: كارت طلب خاص جانبي + قائمة المنتجات -->
+  <!-- الهيكل الرئيسي: كارت طلب خاص مصغر + قائمة المنتجات -->
   <div class="main-content" id="shop">
-    <!-- الخانة الجانبية للطلب الخاص -->
+    <!-- الخانة الجانبية المصغرة -->
     <div class="custom-order-card">
-      <h3>📝 طلب خاص / منتج غير مدرج</h3>
-      <p>لم تجد ما تبحث عنه؟ اكتب اسم المنتج والمواصفات وسيتم إضافته لسلتك وتحديده معك عبر الواتساب!</p>
+      <h3>📝 طلب منتج غير مدرج</h3>
+      <p>اكتب اسم المنتج المطلوب والكمية وسيتم توفيره لك:</p>
       <input type="text" id="customName" placeholder="اسم المنتج (مثال: سلك 4 مم توتال)" />
-      <input type="number" id="customQty" placeholder="الكمية / العدد" min="1" value="1" />
-      <input type="number" id="customPrice" placeholder="السعر المتوقع (اختياري)" min="0" />
-      <button onclick="addCustomToCart()">➕ أضف للطلب</button>
+      <input type="number" id="customQty" placeholder="الكمية" min="1" value="1" />
+      <button onclick="addCustomToCart()">➕ إضافـة للسـلة</button>
     </div>
 
     <!-- شبكة المنتجات -->
@@ -390,7 +388,7 @@ footer .copy{color:#777;font-size:13px;margin-top:20px}
   <h3>🛒 سلة المشتريات <button id="closeCart" onclick="closeCart()">✕</button></h3>
   <div id="cartItems"></div>
   <div class="cart-total">
-    <div class="row"><span>الإجمالي التقديري:</span><span id="totalPrice">0 ج.م</span></div>
+    <div class="row"><span>الإجمالي (للمنتجات الفردية):</span><span id="totalPrice">0 ج.م</span></div>
     <button id="waBtn" onclick="sendWhatsApp()">اطلب الآن عبر واتساب 📲</button>
   </div>
 </div>
@@ -546,15 +544,13 @@ function render(){
   renderCart();
 }
 
-/* ===== إضافة الطلب الخاص المخصص ===== */
+/* ===== إضافة الطلب الخاص المخصص (بدون سعر) ===== */
 function addCustomToCart(){
   const nameInput = document.getElementById('customName');
   const qtyInput = document.getElementById('customQty');
-  const priceInput = document.getElementById('customPrice');
 
   const name = nameInput.value.trim();
   const qty = parseInt(qtyInput.value) || 1;
-  const price = parseFloat(priceInput.value) || 0;
 
   if(!name){
     alert('⚠️ يرجى كتابة اسم المنتج الذي تريده!');
@@ -562,11 +558,10 @@ function addCustomToCart(){
     return;
   }
 
-  // إضافة منتج خاص لسلة العميل
+  // إضافة منتج خاص بدون سعر
   cart.push({
     custom: true,
-    n: `📌 (طلب خاص) ${name}`,
-    p: price,
+    n: name,
     q: qty,
     e: '📝'
   });
@@ -574,10 +569,9 @@ function addCustomToCart(){
   // تفريغ الحقول
   nameInput.value = '';
   qtyInput.value = 1;
-  priceInput.value = '';
 
   renderCart();
-  toast('✅ تم إضافة طلبك الخاص للسلة');
+  toast('✅ تم إضافة منتجك الخاص للسلة');
 }
 
 /* ===== البحث الذكي ===== */
@@ -668,10 +662,9 @@ function renderCart(){
   const box = document.getElementById('cartItems');
   const count = cart.reduce((s,c)=>s+c.q,0);
   
-  // حساب السعر الإجمالي للمنتجات المحددة والطلبات الخاصة
+  // حساب مجموع المنتجات العادية المتوفر لها سعر فقط
   const total = cart.reduce((s,c)=>{
-    const price = c.custom ? c.p : products[c.i].p;
-    return s + (price * c.q);
+    return s + (c.custom ? 0 : products[c.i].p * c.q);
   }, 0);
 
   document.getElementById('cartCount').textContent = count;
@@ -682,11 +675,14 @@ function renderCart(){
   
   cart.forEach((c, idx)=>{
     const p = c.custom ? c : products[c.i];
-    const priceTxt = p.p > 0 ? `${p.p} ج.م` : 'سيتم تحديده';
+    const priceTxt = c.custom ? '📝 طلب خاص (يتحدد لاحقاً)' : `${p.p} ج.م × ${c.q}`;
     const d = document.createElement('div');
     d.className='cart-item';
     d.innerHTML = `
-      <div class="info"><b>${p.e || '📦'} ${p.n}</b><small>${priceTxt} × ${c.q}</small></div>
+      <div class="info">
+        <b>${p.e || '📦'} ${p.n}</b>
+        <small style="${c.custom ? 'color:#e67e22;font-weight:bold;' : ''}">${priceTxt}</small>
+      </div>
       <div class="qty">
         <button onclick="changeQty(${idx},1)">+</button>
         <span>${c.q}</span>
@@ -706,25 +702,28 @@ function closeCart(){
   document.getElementById('overlay').classList.remove('show');
 }
 
-/* ===== واتساب ===== */
+/* ===== إرسال الواتساب بالشكل الجديد ===== */
 function sendWhatsApp(){
   if(!cart.length){ alert('السلة فارغة! أضف منتجات أولاً'); return; }
   const name = getUser() || 'عميل';
   
   const total = cart.reduce((s,c)=>{
-    const price = c.custom ? c.p : products[c.i].p;
-    return s + (price * c.q);
+    return s + (c.custom ? 0 : products[c.i].p * c.q);
   }, 0);
 
   let msg = `🟠 طلب جديد من متجر *الموان* 🟠%0A👤 العميل: ${name}%0A%0A📋 *تفاصيل الطلب:*%0A`;
   
   cart.forEach((c, idx)=>{
-    const p = c.custom ? c : products[c.i];
-    const priceText = p.p > 0 ? `${p.p * c.q} ج.م` : '(يتحدد لاحقاً)';
-    msg += `${idx+1}) ${p.n} × ${c.q} = ${priceText}%0A`;
+    if(c.custom){
+      // تنسيق الطلب الخاص بدون عرض سعر
+      msg += `${idx+1}) ${c.n} × العدد: ${c.q} 👈 *[طلب خاص - غير مدرج بالمتجر]*%0A`;
+    }else{
+      const p = products[c.i];
+      msg += `${idx+1}) ${p.n} × ${c.q} = ${p.p * c.q} ج.م%0A`;
+    }
   });
   
-  msg += `%0A💰 *الإجمالي التقديري: ${total} ج.م*%0A%0A✅ يرجى تأكيد الطلب وتوفير الملاحظات، شكراً 🙏`;
+  msg += `%0A💰 *إجمالي المنتجات المحددة: ${total} ج.م*%0A*(الطلبات الخاصة يتم تحديد سعرها معكم في الشات)*%0A%0A✅ يرجى تأكيد الطلب وتوفير الملاحظات، شكراً 🙏`;
   window.open(`https://wa.me/${WHATSAPP}?text=${msg}`,'_blank');
 }
 
