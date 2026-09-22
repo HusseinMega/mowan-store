@@ -1084,8 +1084,30 @@ function changeDetailQty(d){
 }
 
 function closeProductDetailDirect() {
+  // إيقاف أي فيديو يعمل داخل نافذة المنتج
+  const videos = document.querySelectorAll('#detailMediaBox video');
+  videos.forEach(video => {
+    try {
+      video.pause();
+      video.currentTime = 0;
+      video.removeAttribute('src');
+      video.load();
+    } catch(e) {}
+  });
+
+  // تفريغ منطقة الفيديو/الصورة بالكامل
+  document.getElementById('detailMediaBox').innerHTML = '';
+
+  // إغلاق النافذة
   document.getElementById('productModal').classList.remove('show');
+
+  // إعادة التمرير
   document.body.style.overflow = '';
+
+  // تصفير الحالة
+  currentSelectedProductIndex = null;
+  currentGalleryIndex = 0;
+  productMedia = [];
 }
 function closeProductDetail(e){ if(e.target.id === 'productModal') closeProductDetailDirect(); }
 
