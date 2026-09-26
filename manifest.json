@@ -1,20 +1,20 @@
 {
   "name": "الموان | دهانات وأدوات البناء",
   "short_name": "الموان",
-  "start_url": "/mowan-store/",
-  "scope": "/mowan-store/",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#090d16",
   "theme_color": "#e67e22",
   "icons": [
     {
-      "src": "/mowan-store/icon-192.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/mowan-store/icon-512.png",
-      "sizes": "512x512",
+      "src": "/icon-512.png",
+      "sizes": "512x192",
       "type": "image/png"
     }
   ]

@@ -1,8 +1,8 @@
-const CACHE_NAME = 'mowan-store-v2';
+const CACHE_NAME = 'mowan-store-v3';
 const urlsToCache = [
-  '/mowan-store/',
-  '/mowan-store/index.html',
-  '/mowan-store/manifest.json'
+  '/',
+  '/index.html',
+  '/manifest.json'
 ];
 
 self.addEventListener('install', (e) => {
