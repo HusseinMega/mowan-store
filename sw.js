@@ -1,9 +1,14 @@
+const CACHE_NAME = 'mowan-store-v2';
+const urlsToCache = [
+  '/mowan-store/',
+  '/mowan-store/index.html',
+  '/mowan-store/manifest.json'
+];
+
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open('mowan-store-v1').then((cache) => {
-      return cache.addAll([
-        './index.html'
-      ]);
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache);
     })
   );
 });
