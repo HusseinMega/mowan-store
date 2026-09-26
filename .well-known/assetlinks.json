@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.elmwan_store.twa",
+        "sha256_cert_fingerprints": ["C0:3F:47:8D:C2:63:A6:5F:3E:2A:06:76:F0:DD:0C:60:E7:7F:D5:AE:88:05:E1:1B:C7:CF:14:17:15:25:80:65"]
+      }
+    }]
